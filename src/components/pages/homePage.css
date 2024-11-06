@@ -1,0 +1,28 @@
+.container-homePage {
+    background-color:#84BBD7;
+    position: fixed;
+    top:171.6px;
+    
+}
+.container-homePage-menu {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    height: 70px;
+    background-color: white;
+    border-radius: 0px 0px 40px 0px;
+}
+.icone-menu {
+    font-size: 40px;
+    width: 100px;
+}
+.container-homePage-conteudo {
+    background-color: aliceblue;
+    height: 32em;
+    margin: 20px;
+    border-radius: 10px;
+}
+.container-homePage h1, .container-homePage p {
+    margin: 0px;
+}
