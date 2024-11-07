@@ -3,7 +3,6 @@
     padding: 20px;
     
 }
-
 .icone-menu {
     font-size: 40px;
     width: 100px;
@@ -12,7 +11,30 @@
     background-color: aliceblue;
     height: 32em;
     border-radius: 10px;
+    padding: 20px;
 }
 .container-homePage h1, .container-homePage p {
     margin: 0px;
+}
+.box-content {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    flex-wrap: wrap;
+    padding: 2em 0px;
+    border-bottom: 1px solid grey;
+}
+
+.box {
+    background-color: white;
+    width:fit-content;
+    padding: 1em;
+    display: flex;
+    gap: 1em;
+    border-radius: 1em;
+}
+.box-left {
+    border-right: 1px solid gray;
+    padding-right: 1em;
+    
 }
