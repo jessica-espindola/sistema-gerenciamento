@@ -7,10 +7,14 @@ header {
     background-color: aliceblue;
     color: white;
     text-align: center;
-    border: 1px solid red;
 }
-.container-principal {
-    
+.container-homePage-menu {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    height: 70px;
+    background-color: white;
 }
 header img {
     width: 100px;
@@ -42,8 +46,6 @@ nav a {
     margin: 0 10px;
     text-decoration: none;
 }
-
-
 @media (max-width: 600px) {
     header img {
         width: 50px;
