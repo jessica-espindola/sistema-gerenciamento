@@ -1,9 +1,9 @@
 
 header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: right;
     background-color: aliceblue;
     color: white;
     text-align: center;
@@ -15,6 +15,10 @@ header {
 header img {
     width: 100px;
     height: 100px;
+}
+.container-logo {
+    display: flex;
+    flex-direction: row;
 }
 .container-logo a {
     display: flex;
@@ -38,12 +42,7 @@ nav a {
     margin: 0 10px;
     text-decoration: none;
 }
-.container-homePage-menu {
-    position:fixed;
-    top: 101.6px;
-    width: 100vw;
 
-}
 
 @media (max-width: 600px) {
     header img {

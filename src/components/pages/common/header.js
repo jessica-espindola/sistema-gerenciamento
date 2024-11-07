@@ -22,16 +22,14 @@ function Header() {
                 </a> 
             </div>
         </div>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about">Sobre</a>
-        </nav>
         <div className='container-homePage-menu'>
-        <a><HomeIcon style={{ fontSize: 40, color: '#012066' }}/> </a>
-        <a>
+        <a onClick={() => navigate('/HomePage')}>
+          <HomeIcon style={{ fontSize: 40, color: '#012066' }}/> 
+        </a>
+        <a onClick={() => navigate('/addprofile')}>
           <PersonAddIcon style={{ fontSize: 40, color: '#012066' }} />
         </a>
-        <a>
+        <a onClick={() => navigate('/AdminPainel')}>
           <AdminPanelSettingsIcon style={{ fontSize: 40, color: '#012066' }} />
         </a>
         <a onClick={() => navigate('/configuracoes')}>
