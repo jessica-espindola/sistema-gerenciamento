@@ -1,50 +1,59 @@
-.create-system-content {
-    background-color:#84BBD7;
-    padding: 20px;
-}
-.create-system-content-elements {
-    background-color: aliceblue;
-    height: 32em;
-    border-radius: 10px;
-    padding: 20px;
-}
-.permissions-container {
+.components-buttons {
+    border-bottom: 1px solid #012066;
     display: flex;
-    flex-direction: row;
-    background-color: #e6e6e6;
+    gap: 30px;
+    padding-bottom: 20px;
+    justify-content: right;
 }
-.available-permissions h3 {
-    padding: 0em 0em 0em 1em;
-    
-}
-.available-permissions ul, .selected-permissions ul {
-    background-color: white;
-    border: 0.5px solid;
-    list-style: none;
-    margin: 1em;
-    
-}
-/* Estilo para quando a permissão estiver destacada (clicada) */
-li.highlighted {
-    background-color: #d3f4d3; /* Cor de fundo suave ao destacar */
-    color: #006600; /* Cor do texto ao ser destacado */
+.components-buttons a {
     cursor: pointer;
-  }
-  
-  /* Estilo para quando a permissão for clicada (ativo) */
-  li:active {
-    background-color: #a3e1a3; /* Cor de fundo ao clicar */
-  }
-  
-  /* Estilo de hover nas permissões */
-  li:hover {
-    background-color: #f0f0f0; /* Efeito de hover */
-  }
-  
-.buttons-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    justify-content: center;
-    
+    color: #84BBD7;
 }
+.components-buttons a:hover {
+    color: #012066;
+}
+.components-systemList {
+    color: #012066;
+}
+.components-systemList-item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #84BBD7;
+    margin-right: 30px;
+}
+.components-systemList-item-actions {
+    display: flex;
+    gap: 2em;
+    padding-right: 2em;
+}
+.action-icon, .edit-icon {
+    cursor:pointer;
+    color: #84BBD7;
+}
+.action-icon:hover, .edit-icon:hover {
+    color: #012066;
+    border: 1px solid #012066;
+    padding: 7px;
+    border-radius: 1em;
+}
+/* Estilos para o Modal */
+.modal-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  .modal-box button {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  

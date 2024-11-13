@@ -17,6 +17,17 @@ header {
   overflow-y: auto; /* Permite rolagem apenas no conteúdo */
 }
 
+.background-container {
+  background-color:#84BBD7;
+  padding: 20px;
+}
+
+.background-components-container {
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 20px;
+}
+
 /* Footer fica no final e não é comprimido */
 footer {
   flex-shrink: 0;
