@@ -1,7 +1,7 @@
 .container-homePage {
     background-color:#84BBD7;
     padding: 20px;
-    
+    height: 70vh;
 }
 .icone-menu {
     font-size: 40px;
@@ -9,7 +9,7 @@
 }
 .container-homePage-conteudo {
     background-color: aliceblue;
-    height: 32em;
+    height: 65vh;
     border-radius: 10px;
     padding: 20px;
 }
@@ -32,6 +32,7 @@
     display: flex;
     gap: 1em;
     border-radius: 1em;
+    border: #84BBD7 1px solid;
 }
 .box-left {
     border-right: 1px solid gray;

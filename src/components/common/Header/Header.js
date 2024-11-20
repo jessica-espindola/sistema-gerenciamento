@@ -1,5 +1,5 @@
 import React from 'react';
-import './header.css';
+import './Header.css';
 import { useNavigate } from 'react-router-dom';
 import logo from '../../../assets/images/logo-sistema.png';
 import HomeIcon from '@mui/icons-material/Home';
@@ -24,13 +24,13 @@ function Header() {
         </div>
         <div className='container-homePage-menu'>
         <a onClick={() => navigate('/HomePage')}>
-          <HomeIcon style={{ fontSize: 40, color: '#012066' }}/> 
+          <HomeIcon style={{ fontSize: 40, color: '#012066', cursor: 'pointer' }}/> 
         </a>
         <a onClick={() => navigate('/addprofile')}>
-          <PersonAddIcon style={{ fontSize: 40, color: '#012066' }} />
+          <PersonAddIcon style={{ fontSize: 40, color: '#012066', cursor: 'pointer' }} />
         </a>
         <a onClick={() => navigate('/AdminPainel')}>
-          <AdminPanelSettingsIcon style={{ fontSize: 40, color: '#012066' }} />
+          <AdminPanelSettingsIcon style={{ fontSize: 40, color: '#012066', cursor: 'pointer' }} />
         </a>
         <a onClick={() => navigate('/configuracoes')}>
           <SettingsIcon style={{ fontSize: 40, color: '#012066', cursor: 'pointer' }} />

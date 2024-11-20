@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './homePage.css';
+import './HomePage.css';
 
 function HomePage() {
   const [userCount, setUserCount] = useState(null); 

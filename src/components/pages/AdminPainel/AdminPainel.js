@@ -1,7 +1,7 @@
 // src/components/SystemList.js
 import React, { useEffect, useState } from 'react';
-import { addSystem, deleteSystem, fetchSystem } from '../../services/systemService'; // Importa a função de busca e de deletar mockado
-import '../../components/pages/adminPainel.css';
+import { addSystem, deleteSystem, fetchSystem } from '../../../services/systemService.js'; // Importa a função de busca e de deletar mockado
+import '../../pages/AdminPainel/AdminPainel.css';
 import EditIcon from '@mui/icons-material/Edit';
 import ClearIcon from '@mui/icons-material/Clear';
 import Modal from '@mui/material/Modal';
@@ -15,6 +15,9 @@ const SystemList = () => {
   const [newSystemName, setNewSystemName] = useState(''); // Para capturar o nome do novo sistema
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [systemToDelete, setSystemToDelete] = useState(null);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [systemToEdit, setSystemToEdit] = useState(null);
+  const [editedSystemName, setEditedSystemName] = useState('');
   const navigate = useNavigate(); // Navegação para a nova rota
 
   useEffect(() => {
@@ -86,6 +89,39 @@ const SystemList = () => {
     closeCreateModal();
   };
 
+  const openEditModal = (system) => {
+    setSystemToEdit(system);
+    setEditedSystemName(system.name);
+    setIsEditModalOpen(true);
+  };
+
+  const closeEditModal = () => {
+    setIsEditModalOpen(false);
+    setSystemToEdit(null);
+    setEditedSystemName('');
+  };
+
+  const handleEditSystem = async () => {
+    if (editedSystemName.trim() === '') {
+      alert('Por favor, insira um nome para o sistema.');
+      return;
+    }
+
+    const updatedSystem = { ...systemToEdit, name: editedSystemName };
+
+    // Atualiza o sistema (mockado ou real)
+    await addSystem(updatedSystem);
+
+    // Atualiza o estado após editar o sistema de forma imutável
+    setSystems((prevSystems) =>
+      prevSystems.map((system) =>
+        system.id === updatedSystem.id ? updatedSystem : system
+      )
+    );
+
+    closeEditModal();
+  };
+
   const handleNavigate = () => {
     // Navegar para a página de Gerenciamento de Permissões
     navigate('/gerenciar-permissoes');
@@ -107,7 +143,7 @@ const SystemList = () => {
                   <p>{system.description}</p>
                 </div>
                 <div className="components-systemList-item-actions">
-                  <EditIcon className="action-icon edit-icon" />
+                  <EditIcon className="action-icon edit-icon" onClick={() => openEditModal(system)} />
                   <ClearIcon className="action-icon delete-icon" onClick={() => openModal(system)} />
                 </div>
               </li>
@@ -140,6 +176,23 @@ const SystemList = () => {
           <div>
             <Button variant="outlined" color="primary" onClick={closeCreateModal}>Cancelar</Button>
             <Button variant="contained" color="primary" onClick={handleCreateSystem}>Criar</Button>
+          </div>
+        </Box>
+      </Modal>
+
+      {/* Modal para Edição de Sistema */}
+      <Modal open={isEditModalOpen} onClose={closeEditModal}>
+        <Box className="modal-box">
+          <h2>Editar Sistema</h2>
+          <input
+            type="text"
+            value={editedSystemName}
+            onChange={(e) => setEditedSystemName(e.target.value)}
+            placeholder="Nome do Sistema"
+          />
+          <div>
+            <Button variant="outlined" color="primary" onClick={closeEditModal}>Cancelar</Button>
+            <Button variant="contained" color="primary" onClick={handleEditSystem}>Salvar</Button>
           </div>
         </Box>
       </Modal>
