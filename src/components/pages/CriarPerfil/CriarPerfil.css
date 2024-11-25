@@ -1,0 +1,62 @@
+/* Estilo para a página principal */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  background-color: #e6f2ff;
+}
+
+/* Estilo para o contêiner do formulário */
+.form-container {
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o título */
+.title {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Estilo para os rótulos */
+.label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Estilo para os campos de entrada */
+.input,
+.select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.select {
+  margin-bottom: 40px;
+}
+
+/* Estilo para o botão */
+.button-container {
+    text-align: center;
+  }
+  
+  .button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
