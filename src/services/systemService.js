@@ -1,7 +1,7 @@
 /*DESCOMENTAR QUANDO A API ESTIVER FUNCIONANDO 
 import axios from 'axios'; */
 // APAGAR QUANDO A API ESTIVER FUNCIONANDO
-import usersMock from '../mockData/mockUsers.json';
+import usersMock from '../mockData/mockSystem.json';
 
 // APAGAR QUANDO A API ESTIVER FUNCIONANDO -  Função para buscar todos os usuários usando o JSON mockado
 export const fetchSystem = async () => {

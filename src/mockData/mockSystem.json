@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "name": "Financeiro",
+      "descricao": "Confira o sistema financeiro"
+    },
+    {
+      "id": 2,
+      "name": "Coordenação Pedagógica",
+      "descricao": "Confira o sistema da coordenação pedagógica"
+    },
+    {
+      "id": 3,
+      "name": "Alunos",
+      "descricao": "Confira o sistema de alunos"
+    }
+  ]
