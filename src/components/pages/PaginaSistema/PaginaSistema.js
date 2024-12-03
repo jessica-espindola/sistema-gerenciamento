@@ -44,22 +44,27 @@ const SystemDetails = () => {
                         <a>Adicionar Permissão</a>
                     </div>
                 </div>
-                
-                {/* Exibe as permissões do sistema */}
-                <div className="permissions-list">
-                    <h3>Permissões:</h3>
-                    <ul>
-                        {permissions.length > 0 ? (
-                            permissions.map((permission) => (
-                                <li key={permission.id}>
-                                    {permission.name} - {permission.descricao || 'Sem descrição'}
+                <div className='container-conteudo'>
+                    {/* Exibe as permissões do sistema */}
+                    <div className="permissions-list">
+                        
+                        <h3>Permissões:</h3>
+                        <ul>
+                            {permissions.length > 0 ? (
+                                permissions.map((permission) => (
+                                    <li key={permission.id}>
+                                    <div className='nomePermissao'>{permission.name}</div>
+                                    <div className='descricaoPermissao'>{permission.descricao || 'Sem descrição'}</div>
                                 </li>
-                            ))
-                        ) : (
-                            <p>Sem permissões atribuídas para este sistema.</p>
-                        )}
-                    </ul>
+                                    
+                                ))
+                            ) : (
+                                <p>Sem permissões atribuídas para este sistema.</p>
+                            )}
+                        </ul>
+                    </div>
                 </div>
+                
             </div>
         </div>
     );
