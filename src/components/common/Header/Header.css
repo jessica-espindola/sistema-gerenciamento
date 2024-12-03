@@ -1,59 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-header {
+/* RESETANDO O CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* CRIANDO VARIÁVEIS */
+
+:root {
+    --background-header: aliceblue;
+    --azul-escuro: #012066;
+    --azul-claro: ;
+    --fonte-dropdown: white;
+    --fonte: 'Montserrat';
+}
+/* ESTILIZANDO A DIV PRINCIPAL */
+.container-principal {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: right;
-    background-color: aliceblue;
+    align-items: center;
+    background-color: var(--background-header);
     color: white;
     text-align: center;
 }
-.container-homePage-menu {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    align-items: center;
-    height: 70px;
-    background-color: white;
-    border-top: #012066 1px solid;
-    border-bottom: #012066 1px solid;
-}
-header img {
-    width: 100px;
-    height: 100px;
-}
-.container-logo {
-    display: flex;
-    flex-direction: row;
-}
+
+/* ESTILIZANDO DIV DA LOGO */
 .container-logo a {
     display: flex;
     flex-direction: row;
+    gap: 1em;
+    text-decoration: none;
+
+}
+/* ESTILIZANDO TAMANHO DA LOGO */
+.container-logo img {
+    width: 8em;
+}
+/* ESTILIZANDO DIV DO NOME DO SISTEMA */
+.container-logoNome {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    text-decoration: none;
+    justify-content: center;
+    gap: 0.5em;
+    font-family: var(--fonte); 
 }
-.container-nome {
-    color: #012066
-}
-.container-nome h1 {
+.container-logoNome h1 {
     font-size: 1em;
-    flex-wrap: wrap;
-    
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--azul-escuro);
+      
 }
-.container-nome h2 {
-    font-size: 0.7em;
+.container-logoNome h2 {
+    font-size: 1em;
+    text-align: center;
+    color: var(--azul-escuro);
 }
-nav a {
-    color: #012066;
-    margin: 0 10px;
-    text-decoration: none;
+/* ESTILIZANDO DIV DOS BOTÕES DE MENU */
+.container-homePage-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
 }
-@media (max-width: 600px) {
-    header img {
-        width: 50px;
-        height: 50px;
-    }
-    .container-nome h1, .container-nome h2 {
-        display: none;
-    }
+/* ESTILIZANDO DIV DO PERFIL DO USUÁRIO */
+.container-perfilUsuario {
+    margin-right: 3em;
+}
+/* ESTILIZANDO DIV DO MENU DROPDOWN */
+.dropdown-menu {
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 7.83em;
+    background-color: var(--azul-escuro);
+    color: var(--fonte-dropdown);
+    width: 13em;
+    font-family: var(--fonte);
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.dropdown-menu a {
+    margin-bottom: 2em;
 }
