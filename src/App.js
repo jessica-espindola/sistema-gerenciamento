@@ -6,6 +6,7 @@ import Configuracoes from './components/pages/Configuracoes/Configuracoes';
 import AddProfile from './components/pages/CriarPerfil/CriarPerfil.js';
 import HomePage from './components/pages/HomePage/HomePage.js';
 import AdminPainel from './components/pages/AdminPainel/AdminPainel.js';
+import DetalheSistema from './components/pages/PaginaSistema/PaginaSistema.js';
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                   <Route path="/HomePage" element={<HomePage />} />
                   <Route path="/addprofile" element={<AddProfile />} />
                   <Route path="/AdminPainel" element={<AdminPainel />} />
+                  <Route path="/sistemas/:id" element={<DetalheSistema />} />
                </Routes>
             </div>
             <Footer />
