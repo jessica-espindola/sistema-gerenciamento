@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './header.css';
+import '../../../components/common/Header/Header.css';
 import { useNavigate } from 'react-router-dom';
-import logo from '../../../../assets/images/logo-sistema.png';
+import logo from '../../../assets/images/logo-sistema.png';
 import HomeIcon from '@mui/icons-material/Home';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
