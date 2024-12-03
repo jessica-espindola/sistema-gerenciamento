@@ -39,7 +39,6 @@ const SystemDetails = () => {
             <div className='container-tituloSecao'>
                 <div className='container-tituloSistema'>
                     <h1>{system.name}</h1>
-                    <p>{system.description || 'Nenhuma descrição disponível.'}</p>
                 </div>
                 <div className='container-tituloBotao'>
                     <a>Adicionar Permissão</a>
