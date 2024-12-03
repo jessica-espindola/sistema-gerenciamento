@@ -132,18 +132,19 @@ const SystemList = () => {
       <div className="background-components-container">
         <div className="components-buttons">
           <a onClick={openCreateModal}>Criar Novo Sistema</a>
-          <a onClick={handleNavigate}>Gerenciar Permissões</a>
         </div>
         <div className="components-systemList">
           <ul>
             {systems.map((system) => (
               <li key={system.id} className="components-systemList-item">
                 <div className="components-systemList-item-info">
-                  <h3>{system.name}</h3>
-                  <p>{system.description}</p>
+                  <a onClick={() => navigate('/HomePage')}>
+                    <h3>{system.name}</h3>
+                    <p>{system.description}</p>
+                  </a>
+                  
                 </div>
                 <div className="components-systemList-item-actions">
-                  <EditIcon className="action-icon edit-icon" onClick={() => openEditModal(system)} />
                   <ClearIcon className="action-icon delete-icon" onClick={() => openModal(system)} />
                 </div>
               </li>
@@ -165,34 +166,17 @@ const SystemList = () => {
 
       {/* Modal para Criação de Novo Sistema */}
       <Modal open={isCreateModalOpen} onClose={closeCreateModal}>
-        <Box className="modal-box">
+        <Box className="modal-box-createSystem">
           <h2>Criar Novo Sistema</h2>
           <input
             type="text"
             value={newSystemName}
             onChange={(e) => setNewSystemName(e.target.value)}
-            placeholder="Nome do Sistema"
+            placeholder="Digite aqui o nome para seu novo sistema"
           />
-          <div>
+          <div className='modal-box-createSystem-Buttons'>
             <Button variant="outlined" color="primary" onClick={closeCreateModal}>Cancelar</Button>
             <Button variant="contained" color="primary" onClick={handleCreateSystem}>Criar</Button>
-          </div>
-        </Box>
-      </Modal>
-
-      {/* Modal para Edição de Sistema */}
-      <Modal open={isEditModalOpen} onClose={closeEditModal}>
-        <Box className="modal-box">
-          <h2>Editar Sistema</h2>
-          <input
-            type="text"
-            value={editedSystemName}
-            onChange={(e) => setEditedSystemName(e.target.value)}
-            placeholder="Nome do Sistema"
-          />
-          <div>
-            <Button variant="outlined" color="primary" onClick={closeEditModal}>Cancelar</Button>
-            <Button variant="contained" color="primary" onClick={handleEditSystem}>Salvar</Button>
           </div>
         </Box>
       </Modal>
@@ -201,3 +185,5 @@ const SystemList = () => {
 };
 
 export default SystemList;
+
+
