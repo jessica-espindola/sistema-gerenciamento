@@ -3,7 +3,6 @@ import { useParams, useNavigate } from 'react-router-dom'; // Importa useNavigat
 import '../../PaginaSistema/HomeSistemaDetalhado/PaginaSistemaDetalhado.css';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import mockSystems from '../../../../mockData/mockSystem.json'; // Mock JSON
-import mockPermissions from '../../../../mockData/mockPermissions.json'; // Mock JSON
 
 const SystemDetails = () => {
     const { id } = useParams(); // Obtém o ID da URL
@@ -47,7 +46,7 @@ const SystemDetails = () => {
                         </button>
                     </div>
                     <div className='funcionalidade'>
-                        <button onClick={() => navigate('/AdminPainel')}>
+                        <button onClick={() => navigate(`/sistemas/${system.id}/gerenciar-permissoes`)}>
                         Gerenciar Permissões
                         </button>
 
