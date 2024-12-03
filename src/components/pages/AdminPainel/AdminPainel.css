@@ -1,5 +1,17 @@
+/* CRIANDO VARIÁVEIS */
+
+:root {
+    --background-header: aliceblue;
+    --azul-escuro: #012066;
+    --azul-claro: #84BBD7;
+    --fonte-dropdown: white;
+    --fonte: 'Montserrat';
+}
+
+/*ESTILIZANDO BOTÃO DE CRIAR SISTEMA */
+
 .components-buttons {
-    border-bottom: 1px solid #012066;
+    border-bottom: 1px solid var(--azul-escuro);
     display: flex;
     gap: 30px;
     padding-bottom: 20px;
@@ -7,13 +19,16 @@
 }
 .components-buttons a {
     cursor: pointer;
-    color: #84BBD7;
+    color: var(--azul-claro);
+    font-family: var(--fonte);
 }
 .components-buttons a:hover {
-    color: #012066;
+    color: var(--azul-escuro);
+    font-weight: 700;
 }
+/*ESTILIZANDO LISTA DE SISTEMAS */
 .components-systemList {
-    color: #012066;
+    color: var(--azul-escuro);
     height: 60vh;
 }
 .components-systemList-item {
@@ -21,8 +36,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #84BBD7;
+    border-bottom: 1px solid var(--azul-claro);
     margin-right: 30px;
+    padding: 1em 0em;
+    font-family: var(--fonte);
+    cursor: pointer;
+}
+.components-systemList-item a:hover {
+    font-weight: 700;
 }
 .components-systemList-item-actions {
     display: flex;
@@ -31,10 +52,10 @@
 }
 .action-icon {
     cursor:pointer;
-    color: #84BBD7;
+    color: var (--azul-claro);
 }
 .action-icon:hover {
-    color: #012066;
+    color: var (--azul-escuro);
 }
 
 .delete-icon:hover {
@@ -52,10 +73,36 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
+    font-family: var(--fonte);
   }
-  
+  .modal-box-createSystem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    font-family: var(--fonte);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .modal-box-createSystem-Buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+    align-items: center;
+    justify-content: center;
+  }
   .modal-box button {
     margin-top: 10px;
     margin-right: 10px;
   }
   
+
