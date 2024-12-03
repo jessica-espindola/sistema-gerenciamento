@@ -51,3 +51,19 @@
     color: var(--azul-escuro);
     font-weight: 700;
 }
+
+.permissions-list li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--azul-claro);
+    padding: 0.5em 0em;
+}
+
+.permissions-list h3 {
+    padding: 1em 0em;
+}
+
+.descricaoPermissao {
+    font-size: 0.8em;
+}
