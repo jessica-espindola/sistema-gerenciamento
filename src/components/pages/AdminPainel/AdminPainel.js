@@ -122,11 +122,6 @@ const SystemList = () => {
     closeEditModal();
   };
 
-  const handleNavigate = () => {
-    // Navegar para a página de Gerenciamento de Permissões
-    navigate('/gerenciar-permissoes');
-  };
-
   return (
     <div className="background-container">
       <div className="background-components-container">
