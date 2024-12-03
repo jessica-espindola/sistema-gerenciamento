@@ -14,6 +14,7 @@
 }
 .components-systemList {
     color: #012066;
+    height: 60vh;
 }
 .components-systemList-item {
     list-style: none;
@@ -28,15 +29,16 @@
     gap: 2em;
     padding-right: 2em;
 }
-.action-icon, .edit-icon {
+.action-icon {
     cursor:pointer;
     color: #84BBD7;
 }
-.action-icon:hover, .edit-icon:hover {
+.action-icon:hover {
     color: #012066;
-    border: 1px solid #012066;
-    padding: 7px;
-    border-radius: 1em;
+}
+
+.delete-icon:hover {
+    color: red;
 }
 /* Estilos para o Modal */
 .modal-box {
