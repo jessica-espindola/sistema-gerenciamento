@@ -1,0 +1,92 @@
+/* CRIANDO VARIÁVEIS */
+
+:root {
+    --background-header: aliceblue;
+    --azul-escuro: #012066;
+    --azul-claro: #84BBD7;
+    --fonte-dropdown: white;
+    --fonte: 'Montserrat';
+}
+
+/* ESTILIZANDO FUNDO DO CONTEÚDO PRINCIPAL */
+.background-container {
+    background-color:var(--azul-claro);
+    padding: 20px;
+  }
+  
+  .background-components-container {
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+  }
+/* ESTILIZANDO CONTAINER DO CONTEÚDO */
+.background-components-container {
+    font-family: var(--fonte);
+}
+.container-tituloSecao {
+    border-bottom: 1px solid var(--azul-escuro);
+    padding-bottom: 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 2em;
+    align-items: center;
+    border-bottom: 1px solid var(--azul-escuro);
+}
+.IconeVoltar {
+    color: var(--azul-escuro);
+    font-size: 40;
+}
+.container-tituloSistema {
+    display: flex;
+    flex-direction: column;
+}
+.container-conteudo {
+    display: flex;
+    flex-direction: row;
+    gap: 7em;
+    flex-wrap: wrap;
+}
+.funcionalidade {
+    padding: 1.5em 0em;
+}
+.funcionalidade button {
+    padding: 2em;
+    font-family: var(--fonte);
+    color: var(--fonte-dropdown);
+    background-color: var(--azul-escuro);
+    cursor: pointer;
+}
+/* ESTILIZANDO TÍTULO */
+.background-components-container h1 {
+    font-weight: 700;
+    color: var(--azul-escuro);
+    padding: 1em 0em;
+    
+}
+/*ESTILIZANDO BOTÃO DE ADICIONAR PERMISSÃO */
+.container-tituloBotao a {
+    color: var(--azul-claro);
+    cursor:pointer;
+
+}
+.container-tituloBotao a:hover {
+    color: var(--azul-escuro);
+    font-weight: 700;
+}
+
+.permissions-list li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--azul-claro);
+    padding: 0.5em 0em;
+}
+
+.permissions-list h3 {
+    padding: 1em 0em;
+}
+
+.descricaoPermissao {
+    font-size: 0.8em;
+}
