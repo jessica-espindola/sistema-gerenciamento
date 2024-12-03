@@ -138,7 +138,7 @@ const SystemList = () => {
             {systems.map((system) => (
               <li key={system.id} className="components-systemList-item">
                 <div className="components-systemList-item-info">
-                  <a onClick={() => navigate('/sistemas/:id')}>
+                  <a onClick={() => navigate(`/sistemas/${system.id}`)}>
                     <h3>{system.name}</h3>
                     <p>{system.description}</p>
                   </a>
