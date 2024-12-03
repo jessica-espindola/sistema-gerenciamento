@@ -4,16 +4,16 @@ import './homePage.css';
 function HomePage() {
   const [userCount, setUserCount] = useState(null); 
   const [displayedCount, setDisplayedCount] = useState(0); 
-  const [userName, setUserName] = useState(''); // Novo estado para armazenar o nome do usuário
+  const [userName, setUserName] = useState(''); 
 
   useEffect(() => {
-    // Função para buscar a quantidade de usuários e o nome do usuário logado
+    
     async function fetchData() {
       try {
-        const response = await fetch('URL_DA_API/quantidadeUsuariosENomeUsuario'); // Substitua pela URL correta da API
+        const response = await fetch('URL_DA_API/quantidadeUsuariosENomeUsuario'); 
         const data = await response.json();
-        setUserCount(data.count); // Define a quantidade de usuários
-        setUserName(data.userName); // Define o nome do usuário logado
+        setUserCount(data.count); 
+        setUserName(data.userName); 
       } catch (error) {
         console.error("Erro ao buscar os dados:", error);
       }
@@ -42,7 +42,7 @@ function HomePage() {
   return (
     <div className='container-homePage'>
       <div className='container-homePage-conteudo'>
-        <h1>Olá, {userName}</h1> {/* Exibe o nome do usuário logado */}
+        <h1>Olá, {userName}</h1> 
         <div className='box-content'>
           <div className='box'>
             <div className='box-left'>
