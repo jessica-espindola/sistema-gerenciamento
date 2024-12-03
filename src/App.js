@@ -7,7 +7,8 @@ import AddProfile from './components/pages/CriarPerfil/CriarPerfil.js';
 import HomePage from './components/pages/HomePage/HomePage.js';
 import AdminPainel from './components/pages/AdminPainel/AdminPainel.js';
 import DetalheSistema from './components/pages/PaginaSistema/PaginaSistema.js';
-import './App.css';
+
+
 
 function App() {
    return (

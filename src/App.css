@@ -1,3 +1,13 @@
+/* CRIANDO VARIÁVEIS */
+
+:root {
+  --background-header: aliceblue;
+  --azul-escuro: #012066;
+  --azul-claro: #84BBD7;
+  --fonte-dropdown: white;
+  --fonte: 'Montserrat';
+}
+
 /* Estiliza o container principal para ocupar a altura total da viewport */
 .app-container {
   display: flex;
@@ -18,7 +28,7 @@ header {
 }
 
 .background-container {
-  background-color:#84BBD7;
+  background-color:var(--azul-claro);
   padding: 20px;
 }
 

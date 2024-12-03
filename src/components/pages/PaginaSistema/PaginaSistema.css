@@ -8,6 +8,17 @@
     --fonte: 'Montserrat';
 }
 
+/* ESTILIZANDO FUNDO DO CONTEÚDO PRINCIPAL */
+.background-container {
+    background-color:var(--azul-claro);
+    padding: 20px;
+  }
+  
+  .background-components-container {
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+  }
 /* ESTILIZANDO CONTAINER DO CONTEÚDO */
 .background-components-container {
     font-family: var(--fonte);

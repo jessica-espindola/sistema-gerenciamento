@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Gerar Boleto",
+        "descricao": "Gere um boleto referente aos serviços utilizados",
+        "sistema": 1
+    },
+    {
+        "id": 2,
+        "name": "Emitir Nota Fiscal",
+        "descricao": "Gerar nota fiscal dos serviços prestados",
+        "sistema": 1
+    },
+    {
+        "id": 3,
+        "name": "Alterar Itens de Serviços Utilizados",
+        "descricao": "Altere os itens dos serviços utilizados",
+        "sistema": 1
+    },
+    {
+        "id": 4,
+        "name": "Atribuir Disciplina",
+        "descricao": "Atribua uma disciplina a uma turma",
+        "sistema": 2
+    },
+    {
+        "id": 5,
+        "name": "Excluir Disciplina",
+        "descricao": "Excluir uma disciplina da turma",
+        "sistema": 2
+    },
+    {
+        "id": 6,
+        "name": "Visualizar Horário",
+        "descricao": "Veja as disciplinas do seu semestre",
+        "sistema": 3
+    },
+    {
+        "id": 7,
+        "name": "Ver matrícula",
+        "descricao": "Veja sua situação de matrícula",
+        "sistema": 3
+    }
+]
